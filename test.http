@@ -1,0 +1,8 @@
+###
+POST http://localhost:8000/entry
+Content-Type: application/json
+
+{
+ "text": "Went to a social gathering tonight with mostly new people. Felt anxious at first, but slowly started connecting with a few attendees. Had meaningful conversations, laughed a lot, and left feeling more confident socially. It was tiring but rewarding to step out of my comfort zone."
+}
+###

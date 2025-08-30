@@ -1,0 +1,36 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual environments
+.venv/
+env/
+venv/
+ENV/
+
+# Jupyter / IPython
+.ipynb_checkpoints
+
+# --- Project files ---
+# Environment variables
+.env
+
+# TinyDB / SQLite / other local databases
+*.json
+*.db
+
+# Logs
+*.log
+
+# --- IDE specific ---
+# PyCharm
+.idea/
+# VSCode
+.vscode/
+
+# --- OS files ---
+.DS_Store
+Thumbs.db
