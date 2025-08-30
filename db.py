@@ -41,6 +41,6 @@ def add_weekly_summary(week_start, week_end, week_number, summary, mood, focus_a
 def get_weekly_summaries():
     return weekly_db.all()
 
-def get_weekly_by_number(week_number):
-    Summary = Query()
-    return weekly_db.search(Summary.week_number == week_number)
+
+
+

@@ -11,15 +11,14 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 # Example journal entries
 import json
 
-with open("input_weekly.json", "r", encoding="utf-8") as f:
-    journals = json.load(f)
+
 
     # You are a journaling assistant. Summarize the following weekly journal entries
     # into a cohesive 1 paragraph narrative.
     # Highlight recurring events, important emotions, and overall tone. Try to focus on the positives.
 # --- Weekly Summary Function ---
 def summarize_week(entries):
-    combined_text = "\n".join([f"{e['date']}: {e['text']}" for e in entries])
+    combined_text = "\n".join([e['entry'] for e in entries])
     prompt = f"""   
     Summarize in 3–5 sentences, capturing feelings, challenges, and highlights, so that reading it later clearly shows what the week was like emotionally. Focus on the positives. 
     Journals:
@@ -74,10 +73,6 @@ def classify_week_focus_area(summary):
     return resp.choices[0].message.content.strip().lower()
 
 # --- Run the pipeline ---
-weekly_summary = summarize_week(journals)
-theme = classify_week_mood(weekly_summary)
-focus_area = classify_week_focus_area(weekly_summary)
 
-print("WEEKLY SUMMARY:\n", weekly_summary)
-print("\nMood OF THE WEEK:", theme)
-print("\nFocus Area OF THE WEEK:", focus_area)
+
+
